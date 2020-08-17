@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
+  const [selected, setSelected] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className={`app ${selected && "backgroundImage"}`}>
+      <div className="menu">
+        <h1>Select Difficulty</h1>
+        <h2 onClick={(e) => setSelected(false)}>Easy</h2>
+        <h2 onClick={(e) => setSelected(false)}>Medium</h2>
+        <h2 onClick={(e) => setSelected(false)}>Hard</h2>
+        <h2
+          className={selected && "selected"}
+          onClick={(e) => setSelected(true)}
         >
-          Learn React
-        </a>
-      </header>
+          2020
+        </h2>
+      </div>
     </div>
   );
 }
