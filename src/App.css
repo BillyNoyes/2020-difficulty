@@ -1,9 +1,8 @@
 .app {
   text-align: center;
   width: 100%;
-  height: 100vw;
+  height: 100vh;
   background-color: #2d2d2d;
-  overflow: hidden;
   display: flex;
   justify-items: center;
   align-items: center;
@@ -14,11 +13,12 @@
   background-image: url("https://i.pinimg.com/originals/c0/29/51/c0295190cb44ca3ef88b5b774d44b1fd.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center top;
 }
 
 .menu {
   color: white;
-  width: 40%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -41,6 +41,7 @@ h2 {
   font-size: 20px;
   margin-top: 0;
   margin-bottom: 0;
+  transition: font-weight 0.2s ease;
 }
 
 .menu > h2 {
@@ -50,4 +51,16 @@ h2 {
 .menu > h2:hover {
   background-color: #22272a;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    width: 40%;
+  }
+  .backgroundImage {
+    background-image: url("https://i.pinimg.com/originals/c0/29/51/c0295190cb44ca3ef88b5b774d44b1fd.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
